@@ -3,5 +3,30 @@
 @section('title', 'Productos')
 
 @section('content')
-<iframe src="https://dv.secoweb.mx/home/index/36"width="100%" height="800" scrolling="auto"></iframe>
+
+<h4> Categorias </h4>
+@if($cat)
+   <ul>
+      @foreach($cat as $item)
+         <li><a href="/productos/{{$item->ID_CATEGORIA}}">{{ $item->NOMBRE_CATEGORIA }}</a></li>
+      @endforeach
+   </ul>
+@else
+   <p> No hay categorias </p>
+@endif
+
+
+
+<h4> Productos </h4>
+@if($productos ?? '')
+   <ul>
+      @foreach($productos ?? '' as $p)
+         <li>{{ $p->NOMBRE }}</a></li>
+      @endforeach
+   </ul>
+@else
+   <p> No hay categorias </p>
+@endif
+
+
 @endsection

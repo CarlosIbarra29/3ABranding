@@ -31,11 +31,6 @@ Route::get('/nosotros', function () {
     return view('nosotros');
 });
 
-Route::get('/productos', function () {
-    return view('productos');
-});
-
-
 Route::get('/event', function () {
     return view('event');
 });
@@ -55,3 +50,17 @@ Route::get('/catalogo', function () {
 Route::get('/carrito', function () {
     return view('carrito');
 });
+
+Route::get('/descripcion', function () {
+    return view('descripcion');
+});
+
+Route::get('/productos','CategoriasController@index',
+   function () {
+    return view('productos');
+}
+);
+
+
+//Route::get('/productos/{idProducto}','ProductosController@index')->name('productos');
+
