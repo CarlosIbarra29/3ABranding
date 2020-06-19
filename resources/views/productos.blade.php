@@ -17,7 +17,7 @@
 
 
 
-<h4> Productos detalle </h4>
+<h4> Productos detalles </h4>
 @if($productos ?? '')
    <ul>
       @foreach($productos ?? '' as $p)
